@@ -1,7 +1,7 @@
 GDAL_VERSION ?= 3.4.3
 PYTHON_VERSION ?= 3.10
 BASE_IMAGE ?= python:$(PYTHON_VERSION)-slim-bullseye
-DOCKER_REPO ?= vodka/python-gdal
+DOCKER_REPO ?= vodka/python3-gdal
 IMAGE ?= $(DOCKER_REPO):py$(PYTHON_VERSION)-gdal$(GDAL_VERSION)
 
 image:
