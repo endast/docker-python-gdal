@@ -5,16 +5,18 @@ DOCKER_REPO ?= vodka/python3-gdal
 IMAGE ?= $(DOCKER_REPO):py$(PYTHON_VERSION)-gdal$(GDAL_VERSION)
 
 image:
-	docker build \
+	docker buildx build \
 		--build-arg GDAL_VERSION=$(GDAL_VERSION) \
 		--build-arg BASE_IMAGE=$(BASE_IMAGE) \
+		--platform linux/amd64,linux/arm64 \
 		-t $(IMAGE) .
 
 
 image-no-cache:
-	docker build \
+	docker buildx build \
 		--build-arg GDAL_VERSION=$(GDAL_VERSION) \
 		--build-arg BASE_IMAGE=$(BASE_IMAGE) \
+		--platform linux/amd64,linux/arm64 \
 		--no-cache \
 		-t $(IMAGE) .
 
