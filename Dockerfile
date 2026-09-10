@@ -1,4 +1,4 @@
-FROM debian:trixie
+FROM debian:bookworm
 
 LABEL org.opencontainers.image.source=https://github.com/endast/docker-python-gdal
 LABEL org.opencontainers.image.description="Debian-based image bundled with GDAL/OGR and Python"

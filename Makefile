@@ -1,6 +1,6 @@
 GDAL_VERSION ?= 3.6.2
 PYTHON_VERSION ?= 3.11
-DOCKER_REPO ?= vodka/python-gdal-trixie
+DOCKER_REPO ?= vodka/python3-gdal
 IMAGE ?= $(DOCKER_REPO):py$(PYTHON_VERSION)-gdal$(GDAL_VERSION)
 PLATFORMS ?= linux/amd64,linux/arm64
 
