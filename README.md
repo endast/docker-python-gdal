@@ -15,7 +15,7 @@ The `Dockerfile` provides defaults when executing a container:
 To use a specific version of Python or GDAL with the appropriate tag:
 
 ```bash
-docker run vodka/python-gdal:py3.11-gdal3.6.2
+docker run vodka/python-gdal-trixie:py3.11-gdal3.6.2
 ```
 
 To pass as build arguments:
